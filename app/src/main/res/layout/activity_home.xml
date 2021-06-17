@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.HomeActivity">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/navHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph_main" />
+
+        <fragment
+            android:id="@+id/bottomNavDrawer"
+            android:name="id.ypran.workouttracker.presentation.bottomnavigation.BottomNavDrawerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:fabAlignmentMode="center"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="32dp"
+            app:hideOnScroll="true">
+
+            <LinearLayout
+                android:id="@+id/bottomAppBarContentContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginVertical="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp">
+
+                <ImageView
+                    android:id="@+id/bottomAppBarChevron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/bottom_app_bar_chevron_content_desc"
+                    app:srcCompat="@drawable/ic_arrow_right"
+                    app:tint="?attr/colorOnPrimarySurface" />
+
+                <TextView
+                    android:id="@+id/bottomAppBarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="8dp"
+                    android:text="WPS"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:textColor="?attr/colorControlNormal" />
+            </LinearLayout>
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/fab_setup_exercise_description"
+            app:layout_anchor="@id/bottomAppBar"
+            app:srcCompat="@drawable/ic_new_plan_exercise" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

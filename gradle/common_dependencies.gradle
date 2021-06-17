@@ -1,0 +1,40 @@
+dependencies {
+    implementation deps.kotlin.stdlib
+    implementation deps.support.core_ktx
+
+    // Material Components
+    implementation deps.material
+
+    // AndroidX
+    implementation deps.constraint_layout
+
+    // Retrofit2
+    implementation deps.retrofit2.retrofit
+    implementation deps.retrofit2.converter_gson
+
+    // Navigation
+    implementation deps.navigation.fragment_ktx
+    implementation deps.navigation.ui_ktx
+
+    // LifeCycle
+    implementation deps.lifecycle.livedata_ktx
+    implementation deps.lifecycle.viewmodel_ktx
+
+    // Glide
+    implementation deps.glide.runtime
+
+    // Room
+    implementation deps.room.runtime
+    implementation deps.room.ktx
+    kapt deps.room.compiler
+    testImplementation deps.room.testing
+
+    // Paging
+    implementation deps.paging
+
+    // Koin
+    implementation deps.koin
+
+    implementation "androidx.test.espresso:espresso-idling-resource:3.3.0"
+
+}

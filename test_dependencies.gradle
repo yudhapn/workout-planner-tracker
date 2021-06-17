@@ -1,0 +1,12 @@
+dependencies {
+    // Test
+    testImplementation deps.test.junit
+    testImplementation deps.test.mockito_core
+    testImplementation deps.test.mockito_inline
+    androidTestImplementation deps.test.androidx_junit
+    androidTestImplementation deps.test.androidx_espresso
+    androidTestImplementation deps.test.androidx_espresso_contrib
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.0'
+    //    androidTestImplementation deps.test.androidx_annotation
+}
